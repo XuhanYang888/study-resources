@@ -5,6 +5,7 @@
 	--gray: #333;
 	--dark-gray: #121212;
 	--text-gray: #777;
+	--blue: #2997ff;
 }
 
 #html {
@@ -19,9 +20,55 @@ body {
 	font-family: system-ui, -apple-system, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
 	margin: 0;
 	padding: 0;
+
 	background-color: var(--full-black);
 	color: var(--text-white);
 	margin-bottom: 50px;
+}
+
+#logo-section {
+	background-image: url('imgs/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* This will make sure the image covers the entire body */
+	background-position: center;
+	height: 1000px;
+}
+
+#logo {
+	font-family: Futura;
+	font-variant: small-caps;
+	color: var(--text-white);
+	text-align: center;
+	display: block;
+	font-size: 75pt;
+	margin-block-start: 200px;
+	margin-block-end: 25px;
+	font-weight: 900;
+}
+
+#logo-content {
+	font-family: Futura;
+	color: var(--text-white);
+	text-align: center;
+	display: block;
+	margin-block-start: 25px;
+	margin-block-end: 25px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: 300;
+}
+
+.links {
+	color: var(--blue);
+	text-decoration: none;
+	font-weight: 300;
+}
+
+.links:hover {
+	color: var(--blue);
+	text-decoration: underline;
+	font-weight: 300;
 }
 
 .topnav {
@@ -39,7 +86,6 @@ body {
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 }
-
 
 .topnav a {
 	color: var(--text-white);
@@ -96,18 +142,18 @@ img {
 	height: auto;
 }
 
-footer{
+footer {
 	font-size: 10pt;
 	color: var(--text-gray);
 	padding: 10px 25%;
-	background-color: var(--full-black	);
+	background-color: var(--full-black);
 }
 
-hr{
-	height:1px;
-	border-width:0;
-	color:var(--text-gray);
-	background-color:var(--text-gray);
+hr {
+	height: 1px;
+	border-width: 0;
+	color: var(--text-gray);
+	background-color: var(--text-gray);
 }
 
 .section-background {
