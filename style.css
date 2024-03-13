@@ -17,7 +17,7 @@
 body {
 	font-size: 16pt;
 	font-weight: 300;
-	font-family: system-ui, -apple-system, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: system-ui, sans-serif;
 	margin: 0;
 	padding: 0;
 
@@ -36,7 +36,7 @@ body {
 }
 
 #logo {
-	font-family: Futura;
+	/* font-family: Futura; */
 	font-variant: small-caps;
 	color: var(--text-white);
 	text-align: center;
@@ -48,7 +48,7 @@ body {
 }
 
 #logo-content {
-	font-family: Futura;
+	/* font-family: Futura; */
 	color: var(--text-white);
 	text-align: center;
 	display: block;
@@ -60,15 +60,25 @@ body {
 }
 
 .links {
-	color: var(--blue);
-	text-decoration: none;
-	font-weight: 300;
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 300;
+    position: relative; /* Ensure the .links element is positioned */
+    display: inline-block; /* This helps with vertical alignment */
+}
+
+.links::after {
+    content: "›";
+    padding: 5px;
+	font-size: 16pt;
+    text-decoration: none;
+    position: absolute; /* Position the ::after pseudo-element absolutely */
+    top: 50%; /* Center the ::after pseudo-element vertically */
+    transform: translateY(-50%); /* Adjust the vertical alignment */
 }
 
 .links:hover {
-	color: var(--blue);
-	text-decoration: underline;
-	font-weight: 300;
+    text-decoration: underline; /* Add underline on hover */
 }
 
 .topnav {
