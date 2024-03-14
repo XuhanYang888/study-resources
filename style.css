@@ -60,25 +60,31 @@ body {
 }
 
 .links {
-    color: var(--blue);
-    text-decoration: none;
-    font-weight: 300;
-    position: relative; /* Ensure the .links element is positioned */
-    display: inline-block; /* This helps with vertical alignment */
+	color: var(--blue);
+	text-decoration: none;
+	font-weight: 300;
+	position: relative;
+	/* Ensure the .links element is positioned */
+	display: inline-block;
+	/* This helps with vertical alignment */
 }
 
 .links::after {
-    content: "›";
-    padding: 5px;
+	content: "›";
+	padding: 5px;
 	font-size: 16pt;
-    text-decoration: none;
-    position: absolute; /* Position the ::after pseudo-element absolutely */
-    top: 50%; /* Center the ::after pseudo-element vertically */
-    transform: translateY(-50%); /* Adjust the vertical alignment */
+	text-decoration: none;
+	position: absolute;
+	/* Position the ::after pseudo-element absolutely */
+	top: 50%;
+	/* Center the ::after pseudo-element vertically */
+	transform: translateY(-50%);
+	/* Adjust the vertical alignment */
 }
 
 .links:hover {
-    text-decoration: underline; /* Add underline on hover */
+	text-decoration: underline;
+	/* Add underline on hover */
 }
 
 .topnav {
@@ -104,12 +110,11 @@ body {
 	text-decoration: none;
 	font-size: 12pt;
 	font-weight: 600;
+	transition: all 0.3s ease;
 }
 
 .topnav a:hover {
 	color: var(--full-white);
-	text-decoration: underline;
-	text-decoration-thickness: 2px;
 }
 
 .content {
@@ -137,6 +142,7 @@ h1 {
 	font-weight: 700;
 }
 
+summary,
 p {
 	color: var(--text-white);
 	display: block;
@@ -145,6 +151,37 @@ p {
 	margin-inline-start: 0px;
 	margin-inline-end: 0px;
 	font-size: 16pt;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+summary:after {
+	content: "+";
+	font-family: monospace;
+	margin-left: 10px;
+	border: 1px solid var(--full-white);
+	border-radius: 7.5px;
+	background-color: var(--text-white);
+	color: var(--full-black);
+	height: 20px;
+    width: 20px;
+	text-align: center;
+	line-height: 20px;
+	display: inline-block;
+}
+
+summary:hover{
+	cursor: pointer;
+}
+
+.details-content {
+	padding-left: 15px;
+}
+
+details[open]>summary:after {
+	content: "-";
 }
 
 img {
