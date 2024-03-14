@@ -166,13 +166,13 @@ summary:after {
 	background-color: var(--text-white);
 	color: var(--full-black);
 	height: 20px;
-    width: 20px;
+	width: 20px;
 	text-align: center;
 	line-height: 20px;
 	display: inline-block;
 }
 
-summary:hover{
+summary:hover {
 	cursor: pointer;
 }
 
@@ -182,6 +182,24 @@ summary:hover{
 
 details[open]>summary:after {
 	content: "-";
+}
+
+details .details-content {
+	opacity: 0;
+}
+
+details[open] .details-content {
+	animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 img {
